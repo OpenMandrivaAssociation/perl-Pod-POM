@@ -15,7 +15,6 @@ Source:         http://www.cpan.org/modules/by-module/Pod/%{module}-%{version}.t
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module implements a parser to convert Pod documents into a simple object
