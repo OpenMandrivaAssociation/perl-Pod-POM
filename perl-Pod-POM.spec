@@ -12,6 +12,7 @@ Group:		Development/Perl
 Url:            http://search.cpan.org/dist/%{module}
 Source:         http://www.cpan.org/modules/by-module/Pod/%{module}-%{version}.tar.bz2
 BuildRequires:	perl(Test::Differences)
+BuildRequires:	perl(File::Slurp)
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
