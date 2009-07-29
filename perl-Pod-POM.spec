@@ -1,21 +1,21 @@
-%define	module	Pod-POM
-%define	name	perl-%{module}
-%define	version	0.25
-%define	release	%mkrel 1
+%define	upstream_name	 Pod-POM
+%define	upstream_version 0.25
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	POD Object Model
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Pod/%{module}-%{version}.tar.bz2
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl(Test::Differences)
 BuildRequires:	perl(File::Slurp)
 BuildRequires:	perl(YAML::Any)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements a parser to convert Pod documents into a simple object
@@ -27,7 +27,7 @@ provides view objects which can automatically traverse the tree, or section
 thereof, and generate an output representation in one form or another.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -49,5 +49,3 @@ rm -rf %{buildroot}
 %{_bindir}/*
 %{perl_vendorlib}/Pod
 %{_mandir}/*/*
-
-
