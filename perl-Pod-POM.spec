@@ -1,5 +1,5 @@
 %define	upstream_name	 Pod-POM
-%define	upstream_version 0.25
+%define upstream_version 0.27
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,11 +9,12 @@ Summary:	POD Object Model
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires:	perl(Test::Differences)
 BuildRequires:	perl(File::Slurp)
+BuildRequires:	perl(Test::Differences)
 BuildRequires:	perl(YAML::Any)
+
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
@@ -34,7 +35,7 @@ thereof, and generate an output representation in one form or another.
 %make
 
 %check
-%{__make} test
+%make test
 
 %install
 rm -rf %{buildroot} 
