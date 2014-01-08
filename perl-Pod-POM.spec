@@ -1,14 +1,14 @@
 %define	modname	Pod-POM
-%define modver	0.27
+%define modver 0.28
 
 Summary:	POD Object Model
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Pod/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Pod/Pod-POM-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(File::Slurp)
 BuildRequires:	perl(Test::Differences)
@@ -43,4 +43,5 @@ thereof, and generate an output representation in one form or another.
 %{perl_vendorlib}/Pod
 %{_mandir}/man1/*
 %{_mandir}/man3/*
+
 
