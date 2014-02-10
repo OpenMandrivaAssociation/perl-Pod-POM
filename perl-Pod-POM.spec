@@ -1,5 +1,5 @@
 %define	modname	Pod-POM
-%define modver 0.28
+%define modver 0.29
 
 Summary:	POD Object Model
 Name:		perl-%{modname}
@@ -43,5 +43,6 @@ thereof, and generate an output representation in one form or another.
 %{perl_vendorlib}/Pod
 %{_mandir}/man1/*
 %{_mandir}/man3/*
+
 
 
