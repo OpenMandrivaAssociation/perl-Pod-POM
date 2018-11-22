@@ -4,10 +4,10 @@
 Summary:	POD Object Model
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		http://metacpan.org/pod/Pod::POM
 Source0:	http://www.cpan.org/modules/by-module/Pod/Pod-POM-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
