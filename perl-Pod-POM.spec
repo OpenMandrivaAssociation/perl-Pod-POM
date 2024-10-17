@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	5
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Pod::POM
+Url:		https://metacpan.org/pod/Pod::POM
 Source0:	http://www.cpan.org/modules/by-module/Pod/Pod-POM-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
